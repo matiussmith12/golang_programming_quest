@@ -3,14 +3,22 @@ package main
 import "fmt"
 
 func countFreq(s string)  {
-	sMap := make(map[string]int)
+	sMap := make(map[rune]int)
 
 	for _, v := range s {
-		sMap[string(v)]++
+		sMap[(v)]++
 	}
 
-	for i, v := range sMap {
-		fmt.Printf("%v%v", i, v)
+	for _, v := range s {
+		count := sMap[v]
+		if count == 0 {
+			continue // Char already printed and removed
+		}
+		delete(sMap, v)
+		if count > 1 {
+			fmt.Print(count)
+		}
+		fmt.Print(string(v))
 	}
 }
 func main() {
