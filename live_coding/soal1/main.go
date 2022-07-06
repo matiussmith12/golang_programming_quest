@@ -37,6 +37,5 @@ func main() {
 	arr := []int{2, 1, 3, 4, 5, 6}
 	k := 3
 
-	answer := findMax(arr, k)
-	fmt.Println(answer)
+	fmt.Println(findMax(arr, k))
 }
