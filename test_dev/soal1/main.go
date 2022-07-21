@@ -9,5 +9,5 @@ func swapValueWithoutTemp(A, B int) (rA, rB int){
 	return rA, rB
 }
 func main() {
-	fmt.Println(swapValueWithoutTemp(30, 50))
+	fmt.Println(swapValueWithoutTemp(4, 5))
 }
